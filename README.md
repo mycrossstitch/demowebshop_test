@@ -1,1 +1,1 @@
-# demowebshop_test
+# demowebshop-test project 

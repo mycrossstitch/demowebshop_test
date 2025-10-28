@@ -5,18 +5,19 @@ on: [push]
 jobs:
   ui-tests:
     runs-on: ubuntu-latest
+    env:
+      EMAIL: ${{ secrets.EMAIL }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      NEW_EMAIL: ${{ secrets.NEW_EMAIL }}
+      NEW_FIRST_NAME: ${{ secrets.NEW_FIRST_NAME }}
+      NEW_LAST_NAME: ${{ secrets.NEW_LAST_NAME }}
+      NEW_GENDER: ${{ secrets.NEW_GENDER }}
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Run ui-test via docker-compose
-        env:
-          EMAIL: ${{ secrets.EMAIL }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          NEW_EMAIL: ${{ secrets.NEW_EMAIL }}
-          NEW_FIRST_NAME: ${{ secrets.NEW_FIRST_NAME }}
-          NEW_LAST_NAME: ${{ secrets.NEW_LAST_NAME }}
-          NEW_GENDER: ${{ secrets.NEW_GENDER }}
+
         run: |
           docker-compose up --exit-code-from regression || true     
 

@@ -1,1 +1,1 @@
-[ ]
+[{"uid":"c14e5ed1f9940e80","name":"Test Login","time":{"start":1761646449440,"stop":1761646452531,"duration":3091},"status":"passed","severity":"critical"},{"uid":"a11a0e6bae5a25ea","name":"Change account details","time":{"start":1761646453004,"stop":1761646457699,"duration":4695},"status":"passed","severity":"critical"}]

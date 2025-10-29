@@ -55,11 +55,20 @@ cd demowebshop_test
 ```bash 
 pip install -r requirements.txt
 ```
-3. Запуск тестов:
+3. Создаем локальный .env (пример)
+```
+EMAIL = email@gmail.com
+PASSWORD = password
+NEW_EMAIL = email_new@gmail.com
+NEW_FIRST_NAME = Иван
+NEW_LAST_NAME = Иванов
+NEW_GENDER = male
+```
+4. Запуск тестов:
 ```bash 
 pytest --alluredir=allure-results
 ```
-4. Генерация отчёта Allure:
+5. Генерация отчёта Allure:
 ```bash 
 allure generate allure-results --clean -o allure-report
 allure open allure-report
